@@ -11,7 +11,10 @@ from .auth import  get_current_user
 
 from fastapi import  APIRouter
 
-router = APIRouter()
+router = APIRouter(
+    prefix='/todo',
+    tags=['todo']
+)
 
 
 def get_db():
