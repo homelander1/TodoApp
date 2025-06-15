@@ -5,7 +5,11 @@ from models import Base
 from database import engine
 from routers import todos, auth, admin, users
 
-app = FastAPI()
+app = FastAPI(
+    title="Roman Zhuk - API Development",
+    description="\"ToDo App\". FastAPI, SQLAlchemy, Alembic, Pytest. DB: SQLite3/PostgreSQL",
+    version="1.0.0"
+)
 
 Base.metadata.create_all(bind=engine)
 
